@@ -37,3 +37,6 @@ footer{background:#040b10;color:#c9d4d6;padding:75px 0 30px}.inverted{color:whit
 @media (max-width:520px){
  .hero h1,.blue-hero h1,.subhero h1{font-size:52px}.hero-grid{padding-top:55px}.signal-map{height:380px}.tag{font-size:7px;padding:7px}.t-air{left:8%}.section-dark h2,.blue-feature h2,.section-light h2,.process h2,.africa h2,.partner-section h2,.final-cta h2,.blue-why h2,.blue-pillars h2,.signals h2,.focus h2,.pilot h2,.blue-partner h2{font-size:42px}.program-list p{display:none}.program-list h3{font-size:18px}.process-track{grid-template-columns:1fr}.blue-lockup strong{font-size:46px}.ocean-card{height:380px}.africa-shape{width:250px;height:330px}.partner-section h2{font-size:45px}.coast-console{height:440px}.blue-title strong{font-size:56px}.signal-chips{grid-template-columns:1fr 1fr}.signal-chips span{padding:16px;font-size:8px}.pilot-steps{grid-template-columns:1fr}.pilot-steps article+article{border-left:1px solid rgba(255,255,255,.14);border-top:0}.about-panels article,.partnership-cards article{padding:30px}
 }
+.brand-img{height:38px;width:auto;display:block}
+.footer-brand .brand-img{height:34px}
+.blue-header .brand-img{height:38px}
