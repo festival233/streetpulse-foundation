@@ -1,0 +1,21 @@
+STREETPULSE FOUNDATION — DEPLOYMENT SETTINGS
+
+Repository: use a GitHub repo such as streetpulse-foundation
+Production branch: main
+Cloudflare product: Pages
+Framework preset: None
+Build command: exit 0
+Build output directory: public
+
+Primary domain:
+streetpulsefoundation.org
+
+Also attach:
+www.streetpulsefoundation.org
+
+Preferred canonical:
+https://streetpulsefoundation.org
+
+IMPORTANT:
+Preserve existing DNS records, especially MX/TXT/SPF/DKIM/DMARC.
+Do not claim 501(c)(3) or tax-deductible status unless verified.

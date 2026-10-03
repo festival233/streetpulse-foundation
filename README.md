@@ -1,60 +1,55 @@
-# StreetPulse Foundation — Website
+# StreetPulse Foundation — starter site
 
+A no-framework static starter for `streetpulsefoundation.org` and the flagship `/blue/` program page.
 
-Official website of the **StreetPulse Foundation** ("Street Pulse Foundation Inc.", a Delaware nonprofit corporation), served at [streetpulsefoundation.org](https://streetpulsefoundation.org).
+## Why this version is intentionally static
+This first release is designed to be simple for GitHub + Cloudflare Pages:
+- no Node dependencies
+- no framework install
+- no build pipeline required
+- easy for Muse or Codex to edit
+- can later be migrated to Astro without changing the public URLs
 
+## Pages
+- `/` — Foundation home
+- `/blue/` — StreetPulse Blue
+- `/about/` — About
+- `/partner/` — Partnership
+- `/404.html`
 
-## Architecture
+## Cloudflare Pages settings
+Use Git integration with the GitHub repository.
 
+- Production branch: `main`
+- Framework preset: None
+- Build command: `exit 0` (Cloudflare recommends this for static sites when you do not need a build)
+- Build output directory: `public`
 
-- **Source of truth:** this GitHub repository (`main` branch)
-- **Hosting:** Cloudflare Pages (auto-deploys on every push to `main`)
-- **DNS:** Cloudflare
-- **Domain registration:** Northwest Registered Agent
+The repository root contains the README and the deployable website lives inside `public/`.
 
+## Custom domains
+After the `*.pages.dev` deployment works:
+1. Add `streetpulsefoundation.org` in Pages > Custom domains.
+2. Because this is an apex domain, the domain must be a Cloudflare zone and the nameservers at Northwest must point to the two nameservers Cloudflare assigns.
+3. Add `www.streetpulsefoundation.org` as a custom domain too.
+4. Configure a Cloudflare Redirect Rule so `www.streetpulsefoundation.org/*` permanently redirects to `https://streetpulsefoundation.org/$1`.
+5. Preserve all existing MX/TXT/DKIM/SPF/DMARC records when moving DNS.
 
-## Site
+## Before public promotion
+Replace/verify:
+- legal and tax status wording
+- leadership / board information
+- verified contact email
+- donation processor URL
+- real partner names only after authorization
+- any impact statistics only after evidence exists
+- social accounts
+- photography / media
+- privacy policy and transparency documents
 
+## Editing
+Shared styles are in `public/assets/styles.css`.
+Shared mobile-menu logic is in `public/assets/site.js`.
 
-Pure static HTML/CSS/JS — no build step. Cloudflare Pages settings:
-
-
-| Setting | Value |
-|---|---|
-| Framework preset | None |
-| Build command | *(empty)* |
-| Build output directory | `/` |
-| Root directory | `/` |
-| Production branch | `main` |
-
-
-## Making changes
-
-
-Edit any file in this repo and push to `main` — Cloudflare Pages rebuilds and publishes automatically within a minute or two.
-
-
-## Structure
-
-
-```
-index.html        Homepage
-about.html        About the Foundation
-programs.html     Program areas
-contact.html      Contact information
-404.html          Not-found page
-css/styles.css    All styles
-js/main.js        Mobile nav toggle
-robots.txt        Crawler rules
-sitemap.xml       Sitemap
-_headers          Cloudflare Pages security headers
-```
-
-
-## Notes
-
-
-- Only verified organizational facts belong on this site. Do not claim 501(c)(3) status until the IRS determination letter is received; the site states "Federal 501(c)(3) tax-exempt recognition in progress."
-- The Foundation maintains complete legal, financial, and operational separation from any for-profit entities.
-
-Pipeline verified: 2026-10-02.
+## Important
+Do not claim the Foundation is a 501(c)(3), that donations are tax-deductible, or that it has grants/partners/projects until those facts are verified.
