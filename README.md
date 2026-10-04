@@ -1,4 +1,4 @@
-# StreetPulse Foundation — starter site
+# Street Pulse Foundation — starter site
 
 A no-framework static starter for `streetpulsefoundation.org` and the flagship `/blue/` program page.
 
